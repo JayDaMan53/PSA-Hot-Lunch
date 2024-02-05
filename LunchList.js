@@ -1,72 +1,75 @@
 if (!(lunchList && AB_Schedule)) {
 	var lunchList = {
-		7: {
-			23: "Grilled Cheese Sandwich",
-			24: "Buffalo Bone-in Wings / Teriyaki Bone-in Wings",
-			25: "Salisbury Steak",
-			26: "N/A",
-			27: "N/A",
-			28: "Orange Chicken / Teriyaki Chicken",
-			29: "Cheeseburger",
-			30: "Italian Meat Sauce",
-			31: "Buffalo Bone-in Wings / Teriyaki Bone-in Wings",
-			32: "Nacho Meat / Nacho Queso"
-		},
-		8: {
-			1: "Nacho Meat / Nacho Queso",
-			2: "N/A",
-			3: "N/A",
-			4: "N/A",
-			5: "Cheeseburger",
-			6: "Grilled Cheese Sandwich",
-			7: "Buffalo Bone-in Wings / Teriyaki Bone-in Wings",
-			8: "Salisbury Steak",
-			9: "N/A",
+		2: {
+			5: "Teriyaki Chicken / Orange Chicken",
+			6: "Double Cheeseburger",
+			7: "Grilled Ham & Cheese Sandwich",
+			8: "Bone-in Wings with Sauces",
+			9: "Nacho Meat",
 			10: "N/A",
-			11: "Orange Chicken / Teriyaki Chicken",
-			12: "Cheeseburger",
-			13: "Italian Meat Sauce",
-			14: "Buffalo Bone-in Wings / Teriyaki Bone-in Wings",
-			15: "Nacho Meat / Nacho Queso",
-			16: "N/A",
+			11: "N/A",
+			12: "Smackers Chicken Bites",
+			13: "Double Cheeseburger",
+			14: "Grilled Cheese Sandwich",
+			15: "Bone-in Wings with Sauces",
+			16: "Italian Meat Sauce",
 			17: "N/A",
-			18: "Cheeseburger",
-			19: "Cheeseburger",
-			20: "Smackers Chicken Bites",
-			21: "Buffalo Bone-in Wings / Teriyaki Bone-in Wings",
-			22: "Salisbury Steak",
-			23: "N/A",
+			18: "N/A",
+			19: "N/A",
+			20: "Double Cheeseburger",
+			21: "Grilled Ham & Cheese Sandwich",
+			22: "Bone-in Wings with Sauces",
+			23: "Nacho Meat",
 			24: "N/A",
-			25: "Orange Chicken / Teriyaki Chicken",
-			26: "Cheeseburger",
-			27: "Italian Meat Sauce",
-			28: "Buffalo Bone-in Wings / Teriyaki Bone-in Wings",
-			29: "Nacho Meat / Nacho Queso",
-			30: "N/A",
+			25: "N/A",
+			26: "Smackers Chicken Bites",
+			27: "Double Cheeseburger",
+			28: "Grilled Cheese Sandwich"
+			28: "Bone-in Wings with Sauces"
 		}
 	}
 	
 	var AB_Schedule = {
-		7: {
-			23: "A",
-			24: "B",
-			25: "C",
-			26: "A Weekend",
-			27: "A Weekend",
+		2: {
+			1: "B",
+			2: "C",
+			3: "A Weekend",
+			4: "A Weekend",
+			5: "A",
+			6: "B",
+			7: "A (Half day)",
+			8: "B",
+			9: "C",
+			10: "A Weekend",
+			11: "A Weekend",
+			12: "A",
+			13: "B",
+			14: "A",
+			15: "B",
+			16: "Leap",
+			17: "A Weekend",
+			18: "A Weekend",
+			19: "Day Off",
+			20: "A",
+			21: "B",
+			22: "A",
+			23: "B",
+			24: "A Weekend",
+			25: "A Weekend",
+			26: "A",
+			27: "B",
 			28: "A",
-			29: "B",
-			30: "A",
-			31: "B"
+			29: "B"
 		},
-		8: {
+		3: {
 			1: "C",
 			2: "A Weekend",
 			3: "A Weekend",
-			4: "Labor Day",
-			5: "A",
-			6: "B",
-			7: "A",
-			8: "B",
+			4: "A",
+			5: "B",
+			6: "A",
+			7: "B",
+			8: "C",
 			9: "A Weekend",
 			10: "A Weekend",
 			11: "A",
@@ -91,21 +94,4 @@ if (!(lunchList && AB_Schedule)) {
 			30: "A Weekend",
 		}
 	}
-
-	var ChickenSandwich = {
-		7: {
-			23: "",
-			24: "",
-			25: "",
-			26: "",
-			27: "",
-			28: "",
-			29: "",
-			30: "",
-			31: "",
-			32: ""
-		}
-	}
-	
-	var Version = "1.5.2"
 }
