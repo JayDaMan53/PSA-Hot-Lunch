@@ -1,6 +1,6 @@
 if (!(lunchList && AB_Schedule)) {
 	var lunchList = {
-		2: {
+		1: {
 			5: "Teriyaki Chicken / Orange Chicken",
 			6: "Double Cheeseburger",
 			7: "Grilled Ham & Cheese Sandwich",
@@ -30,7 +30,7 @@ if (!(lunchList && AB_Schedule)) {
 	}
 	
 	var AB_Schedule = {
-		2: {
+		1: {
 			1: "B",
 			2: "C",
 			3: "A Weekend",
@@ -61,7 +61,7 @@ if (!(lunchList && AB_Schedule)) {
 			28: "A",
 			29: "B"
 		},
-		3: {
+		2: {
 			1: "C",
 			2: "A Weekend",
 			3: "A Weekend",
