@@ -25,7 +25,7 @@ if (!(lunchList && AB_Schedule)) {
 			26: "Smackers Chicken Bites",
 			27: "Double Cheeseburger",
 			28: "Grilled Cheese Sandwich"
-			28: "Bone-in Wings with Sauces"
+			29: "Bone-in Wings with Sauces"
 		}
 	}
 	
