@@ -1,7 +1,7 @@
 lunchList = {
     1: {
         5: "Teriyaki Chicken / Orange Chicken",
-        6: "Double Cheeseburger (HAHAHAHAAHA)",
+        6: "Double Cheeseburger",
         7: "Grilled Ham & Cheese Sandwich",
         8: "Bone-in Wings with Sauces",
         9: "Nacho Meat",
@@ -48,7 +48,7 @@ AB_Schedule = {
         16: "Leap",
         17: "A Weekend",
         18: "A Weekend",
-        19: "Day Off",
+        19: "Presidents Day",
         20: "A",
         21: "B",
         22: "A",
@@ -82,7 +82,7 @@ AB_Schedule = {
         19: "B",
         20: "A",
         21: "B",
-        22: "C",
+        22: "Leap",
         23: "A Weekend",
         24: "A Weekend",
         25: "A",
@@ -90,6 +90,7 @@ AB_Schedule = {
         27: "A",
         28: "B",
         29: "C",
-        30: "A Weekend"
+        30: "A Weekend",
+        31: "A Weekend"
     }
 }
