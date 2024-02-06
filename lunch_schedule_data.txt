@@ -94,3 +94,5 @@ AB_Schedule = {
         31: "A Weekend"
     }
 }
+imgLink = "https://www.youtube.com/@9447V"
+version = "1.5.3"
