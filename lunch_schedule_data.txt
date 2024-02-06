@@ -1,7 +1,7 @@
 lunchList = {
     1: {
         5: "Teriyaki Chicken / Orange Chicken",
-        6: "Double Cheeseburger",
+        6: "Double Cheeseburger (HAHAHAHAAHA)",
         7: "Grilled Ham & Cheese Sandwich",
         8: "Bone-in Wings with Sauces",
         9: "Nacho Meat",
