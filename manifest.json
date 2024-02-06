@@ -1,0 +1,42 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "PSA Hot Lunch",
+  "description": "Hot Lunch PSA",
+  "version": "1.5.3",
+  "manifest_version": 3,
+  "action": {
+  	"default_icon": {
+        "19": "Logos/icon19.png",
+        "32": "Logos/icon32.png",
+		"48": "Logos/icon48.png",
+		"128": "Logos/icon128.png"
+      },
+    "default_popup": "popup.html"
+  },
+   "icons": {
+    "16": "Logos/icon16.png",
+	"19": "Logos/icon19.png",
+    "32": "Logos/icon32.png",
+    "48": "Logos/icon48.png",
+    "128": "Logos/icon128.png"
+  },
+  "options_ui": {
+    "page": "settings.html",
+    "open_in_tab": false
+  },
+  "background": {
+    "service_worker": "background.js"
+},
+"host_permissions": [
+  "https://docs.google.com/forms/d/e/1FAIpQLSdOTkx3ZApPjkmQRoQ6OGdlSlNxZgpKLD5nx-_KrL-z1RgB_A/viewform",
+  "https://docs.google.com/forms/d/e/1FAIpQLSekL_hyleGTJOzQRQj6K0qKKdBSJviiYt8sUj9BWa08VfT8cg/viewform",
+  "https://github.com/JayDaMan53/PSA-Hot-Lunch/raw/main/LunchList.js"
+],
+  "permissions": [
+    "storage",
+    "scripting",
+    "tabs",
+	  "notifications"
+  ]
+ }

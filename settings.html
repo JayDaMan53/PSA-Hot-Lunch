@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+  <style>
+    body {
+  min-width: 175px; /* your desired width */
+  max-width: 100%;
+  position: relative;
+  vertical-align: middle;
+  border-radius: 1px;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  transition: background-color 1s;
+	  }
+
+    input, select, option {
+      background-color: rgb(70, 70, 70);
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+    }
+
+    .error-box {
+  position: absolute;
+  width: 40px;
+  left: 90%;
+  top: 88%;
+  height: 40px;
+  opacity: .5;
+  transition: opacity .5s;
+}
+.error-box:hover {
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+.credits {
+  position: absolute;
+  left: 55%;
+  top: -5%;
+  text-align: center;
+  font-size: 15px;
+}
+  </style>
+  <body>
+
+    <div class="credits">
+      <b style="text-decoration: underline;">Credits</b><br>
+      <b>Coder: Jaydon Hall</b><br>
+      <b>Idea Man: Brody Russo</b><br>
+      <b>Concept Idea: JP</b><br>
+      <b>Tester: You! :D</b>
+    </div>
+
+    <h1>Settings:</h1>
+    <h2>Auto Fill:</h2>
+
+	  <label for="Mode">Mode:</label>
+    <select name="Mode" id="Mode">
+        <option value="1">Buttion (Default)</option>
+        <option value="2">Auto</option>
+        <option value="3">Off</option>
+      </select>
+      <br> <p></p>
+	  
+	  <label for="FirstName">First Name:</label>
+    <input itemtype="text" name="FirstName" id="FirstName">
+    <br> <p></p>
+	  
+    <label for="LastName">Last Name:</label>
+    <input itemtype="text" name="LastName" id="LastName">
+    <br> <p></p>
+    
+    <label for="Email">School Email:</label>
+    <input itemtype="text" name="Email" id="Email">
+    <br> <p></p>
+
+      <label for="Lunch">Lunch:</label>
+    <select name="Lunch" id="Lunch1">
+        <option value="1">Hot Lunch</option>
+        <option value="2">Cheese Pizza</option>
+        <option value="3">Pepperoni Pizza</option>
+        <option value="4">Louisiana Chicken Sandwich</option>
+        <option value="5">Charleston Chicken Sandwich</option>
+        <option value="6">Chef Salad</option>
+        <option value="7">Entree Salad</option>
+        <option value="8">Ham Sub</option>
+        <option value="9">Turkey Sub</option>
+      </select>
+      <br> <p></p>
+
+      <h2>Other:</h2>
+
+      <label for="Notification Reminder">Notification Reminder:</label>
+      <input type="checkbox" name="Notification Reminder" id="Notification Reminder">
+      <br> <p></p>
+
+      <input type="button" value="Save" id="Save">
+      <a href="https://forms.gle/jAugGyBu7YaqWHR16" target="_blank" rel="noopener noreferrer" style="color: aqua;">Test it here!</a>
+      
+      <a href="https://forms.gle/TJjvgeRFNJkxxP578" target="_blank" rel="noopener noreferrer">
+        <img class="error-box" src="Logos/Bug Report.png">
+      </a>
+    <script src="optionsJS.js"></script>
+  </body>
+</html>
