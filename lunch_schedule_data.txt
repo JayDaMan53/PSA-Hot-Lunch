@@ -95,4 +95,4 @@ AB_Schedule = {
     }
 }
 imgLink = "https://www.youtube.com/@9447V"
-version = "1.5.3"
+version = "1.5.4"
