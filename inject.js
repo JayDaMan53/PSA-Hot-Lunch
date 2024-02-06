@@ -68,27 +68,35 @@ if (!document.getElementById("PSA-AutoFill")) {
 				const lines = data.split('\n');
 				const lunchList = {};
 				const AB_Schedule = {};
+				let imgLink = ""; // Initialize imgLink as an empty string
+				let version = ""; // Initialize version as an empty string
 				let currentObject = null;
 
 				lines.forEach(line => {
 					if (line.startsWith('lunchList = {')) {
-					currentObject = lunchList;
+						currentObject = lunchList;
 					} else if (line.startsWith('AB_Schedule = {')) {
-					currentObject = AB_Schedule;
+						currentObject = AB_Schedule;
 					} else if (line.match(/^\s+\d+: {/)) { // New sub-object
-					const key = line.match(/^\s+(\d+): {/)[1];
-					currentObject[key] = {};
+						const key = line.match(/^\s+(\d+): {/)[1];
+						currentObject[key] = {};
 					} else if (line.match(/^\s+\d+: ".+"/)) { // Key-value pair
-					const matches = line.match(/^\s+(\d+): "(.+)"/);
-					const key = matches[1];
-					const value = matches[2];
-					const lastKey = Object.keys(currentObject)[Object.keys(currentObject).length - 1];
-					currentObject[lastKey][key] = value;
+						const matches = line.match(/^\s+(\d+): "(.+)"/);
+						const key = matches[1];
+						const value = matches[2];
+						const lastKey = Object.keys(currentObject)[Object.keys(currentObject).length - 1];
+						currentObject[lastKey][key] = value;
+					} else if (line.startsWith('imgLink = "')) { // imgLink assignment
+						imgLink = line.match(/^imgLink = "(.+)"/)[1];
+					} else if (line.startsWith('version = "')) { // version assignment
+						version = line.match(/^version = "(.+)"/)[1];
 					}
 				});
 
 				console.log('Lunch List:', lunchList);
 				console.log('AB Schedule:', AB_Schedule);
+				console.log('Image Link:', imgLink); // Log the imgLink
+				console.log('Version:', version); // Log the version
 				
 				document.getElementById("Lunch").innerHTML = "Todays hot-lunch:<br>" + lunchList[month][day];
 				document.getElementById("next-lunch").innerHTML = "Tomorrow's hot-lunch:<br>" + lunchList[month][day + 1];

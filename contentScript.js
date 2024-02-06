@@ -37,30 +37,49 @@ async function main() {
     try {
         // Assuming getdata is a function that returns a promise
         const data = await getdata(); // Wait for getdata to finish
-        const lines = data.split('\n');
+		const lines = data.split('\n');
 		const lunchList = {};
 		const AB_Schedule = {};
+		let imgLink = ""; // Initialize imgLink as an empty string
+		let version = ""; // Initialize version as an empty string
 		let currentObject = null;
 
 		lines.forEach(line => {
 			if (line.startsWith('lunchList = {')) {
-			currentObject = lunchList;
+				currentObject = lunchList;
 			} else if (line.startsWith('AB_Schedule = {')) {
-			currentObject = AB_Schedule;
+				currentObject = AB_Schedule;
 			} else if (line.match(/^\s+\d+: {/)) { // New sub-object
-			const key = line.match(/^\s+(\d+): {/)[1];
-			currentObject[key] = {};
+				const key = line.match(/^\s+(\d+): {/)[1];
+				currentObject[key] = {};
 			} else if (line.match(/^\s+\d+: ".+"/)) { // Key-value pair
-			const matches = line.match(/^\s+(\d+): "(.+)"/);
-			const key = matches[1];
-			const value = matches[2];
-			const lastKey = Object.keys(currentObject)[Object.keys(currentObject).length - 1];
-			currentObject[lastKey][key] = value;
+				const matches = line.match(/^\s+(\d+): "(.+)"/);
+				const key = matches[1];
+				const value = matches[2];
+				const lastKey = Object.keys(currentObject)[Object.keys(currentObject).length - 1];
+				currentObject[lastKey][key] = value;
+			} else if (line.startsWith('imgLink = "')) { // imgLink assignment
+				imgLink = line.match(/^imgLink = "(.+)"/)[1];
+			} else if (line.startsWith('version = "')) { // version assignment
+				version = line.match(/^version = "(.+)"/)[1];
 			}
 		});
 
 		console.log('Lunch List:', lunchList);
 		console.log('AB Schedule:', AB_Schedule);
+		console.log('Image Link:', imgLink); // Log the imgLink
+		console.log('Version:', version); // Log the version
+
+		if (imgLink == "") {
+			document.getElementById("ad1").remove()
+		} else {
+			document.getElementById("ad1").herf = imgLink
+		}
+
+		var manifestData = chrome.runtime.getManifest();
+		if (manifestData.version != version) {
+			Award("Extension out of date!", "There is eather a new update out or a new update is on the way!", 10000, true)
+		}
 
         let monthNAMES = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."]; document.getElementById("Hedether").innerHTML = "Lunch for " + monthNAMES[month];
 
@@ -191,32 +210,22 @@ toggle.addEventListener("change", function () {
 	}
 });
 
-/*/var currentDate = new Date(); // Get the current date
-var date1 = new Date(currentDate.getFullYear(), 3, 1); // April 1 of the current year
-var date2 = new Date(currentDate.getFullYear(), 4, 1); // May 1 of the current year
+/*/document.getElementById("ad1").remove()
+document.getElementById("ad2").remove()/*/
 
-if (currentDate >= date1 && currentDate < date2) {
-	document.getElementById("ad1").src = "ADs/Mr. Reetz Snack Cart!.png"
-} else {
-	document.getElementById("ad1").src = "ADs/ADBlank.png"
-}/*/
-document.getElementById("ad1").remove()
-document.getElementById("ad2").remove()
-/*/var date3 = new Date(currentDate.getFullYear(), 3, 1); // April 1 of the current year
-var date4 = new Date(currentDate.getFullYear(), 4, 1); // May 1 of the current year
 
-if (currentDate >= date3 && currentDate < date4) {
-  document.getElementById("ad1").src = ""
-} else {
-  document.getElementById("ad1").src = "ADs/ADBlank.png"
-}
-/*/
-
-function Award(AwardName, AwardDescription, TimeOnScreen) {
+function Award(AwardName, AwardDescription, TimeOnScreen, notAward) {
 	var clicker = document.getElementsByClassName("SandwichClicker")[0]
 	if (clicker.classList == "SandwichClicker") {
-		clicker.children[2].innerHTML = AwardName
-		clicker.children[4].innerHTML = AwardDescription
+		if (!notAward) {
+			clicker.innerHTML = '<b style="font-size: medium; text-decoration: underline;">Achievement Unlocked!</b><br><b style="font-size: medium">Title</b><br><b>Description</b>'
+			clicker.children[2].innerHTML = AwardName
+			clicker.children[4].innerHTML = AwardDescription
+		} else {
+			clicker.innerHTML = '<b style="font-size: medium">Title</b><br><b>Description</b>'
+			clicker.children[0].innerHTML = AwardName
+			clicker.children[2].innerHTML = AwardDescription
+		}
 		chrome.storage.local.get(["DarkMode"]).then((DarkMode) => {
 			if (!DarkMode.DarkMode) {
 				clicker.classList.remove("SandwichClicker")
