@@ -224,7 +224,7 @@ async function main() {
 		console.log('Image Link:', imgLink); // Log the imgLink
 		console.log('Version:', version); // Log the version
 
-		if (imgLink == "") {
+		/*/if (imgLink == "") {
 			document.getElementById("ad1").remove()
 		} else {
 			//document.getElementById("ad1").herf = imgLink
@@ -233,7 +233,7 @@ async function main() {
 		var manifestData = chrome.runtime.getManifest();
 		if (manifestData.version != version) {
 			Award("Extension out of date!", "There is eather a new update out or a new update is on the way!", 10000, true)
-		}
+		}/*/
 
         let monthNAMES = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."]; document.getElementById("Hedether").innerHTML = "Lunch for " + monthNAMES[month];
 
