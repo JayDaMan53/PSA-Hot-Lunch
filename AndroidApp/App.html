@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+  <style>
+    body {
+  min-width: 200px; /* your desired width */
+  max-width: 100%;
+  position: relative;
+  vertical-align: middle;
+  border-radius: 1px;
+  color: rgb(0, 0, 0);
+  transition: background-color 1s;
+	  }
+	  
+	  .rounded-text-box {
+  border: 0.5px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 3px 3px 5px #555;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  transition: background-color 1s;
+	  }
+
+    .rounded-text-box-dark {
+  border: 0.5px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 3px 3px 5px #555;
+  color: #fff;
+  background-color: rgb(70, 70, 70);
+  transition: background-color 1s;
+	  }
+
+    .dark-mode {
+  background-color: #000;
+  color: #fff;
+  transition: background-color 1s;
+}
+
+.dark-mode-link {
+  color: rgb(0, 229, 254);
+  transition: color 1s;
+  z-index: 999999999999;
+}
+
+.link {
+  color: rgb(0, 47, 254);
+  transition: color 1s;
+  z-index: 999999999999;
+}
+
+.Settings {
+  position: absolute;
+  width: 40px;
+  left: 84%;
+  top: 92%;
+  height: 40px;
+  transition: opacity .5s;
+}
+
+.Settings:hover {
+  cursor: pointer;
+}
+
+.SettingsLink {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.SandwichClicker {
+  border: 0.5px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 3px 3px 5px #555;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  align-self: center;
+  top: 80%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s, width 1s, background-color 1s;
+}
+
+.SandwichClickerOff {
+  border: 0.5px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 3px 3px 5px #555;
+  color: #fff;
+  background-color: rgb(70, 70, 70);
+  position: absolute;
+  align-self: center;
+  top: 80%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s, width 1s, background-color 1s;
+}
+
+.SandwichClickerLight {
+  border: 0.5px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 3px 3px 5px #555;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  align-self: center;
+  top: 80%;
+  opacity: 1;
+  transition: opacity 1s, background-color 1s;
+  pointer-events: auto;
+}
+
+.SandwichClickerDark {
+  border: 0.5px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 3px 3px 5px #555;
+  color: #fff;
+  background-color: rgb(70, 70, 70);
+  position: absolute;
+  align-self: center;
+  top: 80%;
+  opacity: 1;
+  transition: opacity 1s, background-color 1s;
+}
+
+  </style>
+  <body>
+    <h2 id="Hedether"></h2>
+    <h3>By: Jaydon Hall</h3>
+    <h3 id="Thedate">Date: loading...</h3>
+	  
+	<label for="dark-mode-toggle">Dark Mode:</label>  
+	<input type="checkbox" id="dark-mode-toggle">
+
+  <h3 class="rounded-text-box" id="AB">loading...</h3>
+    <h3 class="rounded-text-box" id="Lunch">loading...</h3>
+	<h3 class="rounded-text-box" id="next lunch">loading...</h3>
+  <!--<div class="SandwichClicker"><b style="font-size: medium; text-decoration: underline;">Achievement Unlocked!</b><br><b style="font-size: medium">Title</b><br><b>Description</b></div>
+  <a id="SettingsLink" class="link SettingsLink">Auto Fill Settings</a>-->
+  <p></p>
+	<a id="Order" class="link" href="https://docs.google.com/forms/d/e/1FAIpQLScYbWTllChTKfGcOo9tFfeQBKSE3puzfy7T6J6TEOtwW4OWpw/viewform" target="_blank" rel="noopener noreferrer">Order</a>
+	<p></p>
+	<a id="menu" class="link" href="https://linqconnect.com/public/menu/TXTX8P?buildingId=08d48a65-bba8-ed11-8e6a-c150c5c7a01a" target="_blank" rel="noopener noreferrer" style="z-index: 99999999;">Full Menu</a>
+	<p></p>
+  <a id="FullAB" class="link" href="https://docs.google.com/spreadsheets/d/1Ui6exqXXKyrGuQyXlnOzDgjdJh0MP4pfHWWtvxNuBPI/edit#gid=1193680506" target="_blank" rel="noopener noreferrer">Full A-B schedule</a>
+  <br>
+  <br>
+	<!--<a href="https://www.youtube.com/@9447V" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/JayDaMan53/PSA-Hot-Lunch/main/Images/Img1.png" alt="Ad" id="ad1"></a>-->
+  <img id="Settings" class="Settings" src="Logos/Settings.png">
+  <script></script>
+  </body>
+</html>
