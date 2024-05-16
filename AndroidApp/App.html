@@ -170,7 +170,7 @@
 	return days;
   }
   const date = new Date();
-  let endDate = new Date('2023-06-6');
+  let endDate = new Date('2024-06-6');
   let businessDays = getBusinessDays(date, endDate);
 
 let day = date.getDate();
@@ -274,15 +274,15 @@ async function main() {
 			}
 		} else {
 			if (AB_Schedule[month][day] == "A") {
-					document.getElementById("AB").innerHTML = "Today is an A day!"
+					document.getElementById("AB").innerHTML = "Today is an A day! (" + businessDays + " school days left)"
 				}
 				else if (AB_Schedule[month][day] == "B") {
-					document.getElementById("AB").innerHTML = "Today is a B day!"
+					document.getElementById("AB").innerHTML = "Today is a B day! (" + businessDays + " school days left)"
 				}
 				else if (AB_Schedule[month][day] == "C") {
-					document.getElementById("AB").innerHTML = "Today is a C day!"
+					document.getElementById("AB").innerHTML = "Today is a C day! (" + businessDays + " school days left)"
 			} else {
-				document.getElementById("AB").innerHTML = "Today is " + AB_Schedule[month][day] + "!"
+				document.getElementById("AB").innerHTML = "Today is " + AB_Schedule[month][day] + "! (" + businessDays + " school days left)"
 			}
 		}
 
