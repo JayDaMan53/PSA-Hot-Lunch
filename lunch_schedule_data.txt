@@ -53,7 +53,7 @@ lunchList = {
         26: "N/A",
         27: "N/A",
         28: "Hot Dog",
-        29: Grilled Cheese Sandwich",
+        29: "Grilled Cheese Sandwich",
         30: "Bone-in Wings with Sauces",
         31: "Italian Meat Sauce",
         32: "N/A",
