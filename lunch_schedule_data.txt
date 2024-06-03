@@ -8,7 +8,7 @@ lunchList = {
 }
 
 AB_Schedule = {
-    3: {
+    5: {
         3: "A",
         4: "B",
         5: "A",
