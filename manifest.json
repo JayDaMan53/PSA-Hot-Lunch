@@ -3,7 +3,7 @@
 
   "name": "PSA Hot Lunch",
   "description": "Hot Lunch PSA",
-  "version": "1.5.5",
+  "version": "1.5.6",
   "manifest_version": 3,
   "action": {
   	"default_icon": {
@@ -31,7 +31,8 @@
 "host_permissions": [
   "https://docs.google.com/forms/d/e/1FAIpQLSdOTkx3ZApPjkmQRoQ6OGdlSlNxZgpKLD5nx-_KrL-z1RgB_A/viewform",
   "https://docs.google.com/forms/d/e/1FAIpQLSekL_hyleGTJOzQRQj6K0qKKdBSJviiYt8sUj9BWa08VfT8cg/viewform",
-  "https://github.com/JayDaMan53/PSA-Hot-Lunch/raw/main/LunchList.js"
+  "https://github.com/JayDaMan53/PSA-Hot-Lunch/raw/main/LunchList.js",
+  "https://docs.google.com/forms/d/e/1FAIpQLSf7lnNyFEmRpmOX_0mqx8zwb2q-rCXS-S9X_VPqyRxR3OXQ_w/viewform"
 ],
   "permissions": [
     "storage",

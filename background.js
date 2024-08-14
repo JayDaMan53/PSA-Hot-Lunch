@@ -4,7 +4,7 @@
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
   if (changeInfo.status == 'complete' /*/&& !isCodeRunning/*/) {
     //isCodeRunning = true;
-    if ((tab.url == "https://docs.google.com/forms/d/e/1FAIpQLScYbWTllChTKfGcOo9tFfeQBKSE3puzfy7T6J6TEOtwW4OWpw/viewform" || tab.url == "https://docs.google.com/forms/d/e/1FAIpQLSekL_hyleGTJOzQRQj6K0qKKdBSJviiYt8sUj9BWa08VfT8cg/viewform")) {
+    if ((tab.url == "https://docs.google.com/forms/d/e/1FAIpQLScYbWTllChTKfGcOo9tFfeQBKSE3puzfy7T6J6TEOtwW4OWpw/viewform" || tab.url == "https://docs.google.com/forms/d/e/1FAIpQLSekL_hyleGTJOzQRQj6K0qKKdBSJviiYt8sUj9BWa08VfT8cg/viewform" || tab.url == "https://docs.google.com/forms/d/e/1FAIpQLSf7lnNyFEmRpmOX_0mqx8zwb2q-rCXS-S9X_VPqyRxR3OXQ_w/viewform")) {
       attachScript(tabId, ['inject.js']);
       console.log("script attached");
       //isCodeRunning = false
@@ -15,7 +15,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
         if (changeInfo.status == 'complete') {
-        if (tab.url == "https://docs.google.com/forms/d/e/1FAIpQLScYbWTllChTKfGcOo9tFfeQBKSE3puzfy7T6J6TEOtwW4OWpw/viewform") {
+        if (tab.url == "https://docs.google.com/forms/d/e/1FAIpQLScYbWTllChTKfGcOo9tFfeQBKSE3puzfy7T6J6TEOtwW4OWpw/viewform" || tab.url == "https://docs.google.com/forms/d/e/1FAIpQLSekL_hyleGTJOzQRQj6K0qKKdBSJviiYt8sUj9BWa08VfT8cg/viewform" || tab.url == "https://docs.google.com/forms/d/e/1FAIpQLSf7lnNyFEmRpmOX_0mqx8zwb2q-rCXS-S9X_VPqyRxR3OXQ_w/viewform") {
             const date = new Date();
 	        const day = date.getDate();
 	        chrome.storage.local.set({ Reminder: day }).then(() => {
@@ -82,6 +82,6 @@ if (DayOfWeek != 0 && DayOfWeek != 6) {
 }
 
 chrome.notifications.onClicked.addListener(function(notifId){
-    chrome.tabs.create({ url: 'https://docs.google.com/forms/d/e/1FAIpQLScYbWTllChTKfGcOo9tFfeQBKSE3puzfy7T6J6TEOtwW4OWpw/viewform' });
+    chrome.tabs.create({ url: 'https://docs.google.com/forms/d/e/1FAIpQLSf7lnNyFEmRpmOX_0mqx8zwb2q-rCXS-S9X_VPqyRxR3OXQ_w/viewform' });
     chrome.notifications.clear(notifId)
 });

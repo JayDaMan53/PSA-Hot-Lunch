@@ -1,6 +1,3 @@
-Added fail safe for if you do not have autofill set up in the settings
-Set notification time to be the new time (ending at 9:15 now not 9)
-Set notification text to say "Lunch" and not "Breakfast"
-Fixed save bugs
-Fixed notifications being enabled by default
-Fixed Auto-fill not loading (due to planned update that was removed)
+Added lunch for 24-25
+removed countdown
+added new AB & order links
