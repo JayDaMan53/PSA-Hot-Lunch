@@ -3,9 +3,8 @@
 
   "name": "PSA Hot Lunch",
   "description": "Hot Lunch PSA",
-  "version": "1.5.9",
+  "version": "1.5.8",
   "manifest_version": 3,
-  "kiosk_enabled": true,
   "action": {
   	"default_icon": {
         "19": "Logos/icon19.png",
