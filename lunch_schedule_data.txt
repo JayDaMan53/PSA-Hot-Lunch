@@ -39,7 +39,7 @@ lunchList = {
         17: "Walking Taco",
         18: "Smackers Chicken Bites",
         19: "Bone-in Wings",
-        20: "N/A",
+        20: "No lunch for today!",
         21: "N/A",
         22: "N/A",
         23: "Hot Dog",
