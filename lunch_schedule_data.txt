@@ -46,7 +46,7 @@ lunchList = {
         24: "Italian Meat Sauce",
         25: "Nacho/Taco Toppings",
         26: "Orange Chicken | Teriyaki Chicken",
-        27: "Mini Corn Dogs",
+        27: "Mini Corn Dogs | Mission design BBQ",
         28: "N/A",
         29: "N/A",
         30: "Walking Taco",
