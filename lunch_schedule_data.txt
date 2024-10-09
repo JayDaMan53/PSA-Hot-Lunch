@@ -124,7 +124,7 @@ AB_Schedule = {
         22: "B",
         23: "A",
         24: "B",
-        25: "A",
+        25: "Leap",
         26: "A Weekend",
         27: "A Weekend",
         28: "B",
