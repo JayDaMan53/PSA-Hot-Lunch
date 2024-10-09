@@ -96,7 +96,7 @@ async function main() {
 		}
 
 		if (AB_Schedule[month][day] == "Leap") {
-			document.getElementById("AB").innerHTML = "Today is an Leap day!"
+			document.getElementById("AB").innerHTML = "Today is a Leap day!"
 		} else if (AB_Schedule[month][day] == "A Weekend") {
 			if (AB_Schedule[month][day + 1] != "A Weekend") {
 				if (AB_Schedule[month][day + 1] == "A") {
@@ -140,9 +140,9 @@ main(); // Don't forget to call the main function
 document.getElementById("Settings").addEventListener("click", function() {
 	  chrome.runtime.openOptionsPage();
 	});
-document.getElementById("SettingsLink").addEventListener("click", function() {
-	chrome.runtime.openOptionsPage();
-  });
+// document.getElementById("SettingsLink").addEventListener("click", function() {
+// 	chrome.runtime.openOptionsPage();
+//   });
 
 function DarkLight(on) {
 	if (on) {
