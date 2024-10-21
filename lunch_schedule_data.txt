@@ -56,7 +56,7 @@ lunchList = {
         22: "Texas Toast Grilled Cheese Sandwich",
         23: "Cheeseburger",
         24: "Bone-in Wings",
-        25: "BBQ Turkey",
+        25: "BBQ Turkey | Pizza $5",
         26: "N/A",
         27: "N/A",
         28: "Orange Chicken | Teriyaki Chicken",
