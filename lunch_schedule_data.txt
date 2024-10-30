@@ -29,9 +29,9 @@ lunchList = {
         27: "N/A",
         28: "Orange Chicken | Teriyaki Chicken",
         29: "Walking Taco",
-        30: "Smackers Chicken Bites",
+        30: "No lunch",
         31: "Bone-in Wings",
-        32: "Jaydon needs to update the list :("
+        32: "Salisbury Steak"
     },
     10: {
         1: "Salisbury Steak",
@@ -99,7 +99,7 @@ AB_Schedule = {
         27: "A Weekend",
         28: "B",
         29: "A",
-        30: "B",
+        30: "a B half-day",
         31: "A"
     },
     10: {
