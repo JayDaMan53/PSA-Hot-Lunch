@@ -40,6 +40,15 @@
   text-align: center;
   font-size: 15px;
 }
+
+input:hover[type="checkbox"] {
+  cursor: pointer;
+}
+
+input:hover[type="button"] {
+  cursor: pointer;
+}
+
   </style>
   <body>
 
@@ -90,6 +99,46 @@
       <label for="Notification Reminder">Notification Reminder:</label>
       <input type="checkbox" name="Notification Reminder" id="Notification Reminder">
       <br> <p></p>
+
+      <h2>Teacher:</h2>
+
+      <label for="Attendance Reminders"><a style="color: yellow;">[NEW]</a> Attendance Reminders:</label>
+      <input type="checkbox" name="Attendance Reminders" id="Attendance Reminders">
+      <br> <p></p>
+      <div id="Classes" hidden>
+        <p>Select all classes you need to take attendance in:</p>
+        <label for="1A">1A:</label>
+        <input type="checkbox" name="1A" id="">
+        <br>
+        <label for="2A">2A:</label>
+        <input type="checkbox" name="2A" id="">
+        <br>
+        <label for="3A1">3A (First Lunch):</label>
+        <input type="checkbox" name="3A1" id="">
+        <br>
+        <label for="3A2">3A (Second Lunch):</label>
+        <input type="checkbox" name="3A2" id="">
+        <br>
+        <label for="4A">4A:</label>
+        <input type="checkbox" name="4A" id="">
+        <br><p></p>
+
+        <label for="1B">1B:</label>
+        <input type="checkbox" name="1B" id="">
+        <br>
+        <label for="2B">2B:</label>
+        <input type="checkbox" name="2B" id="">
+        <br>
+        <label for="3B1">3B (First Lunch):</label>
+        <input type="checkbox" name="3B1" id="">
+        <br>
+        <label for="3B2">3B (Second Lunch):</label>
+        <input type="checkbox" name="3b2" id="">
+        <br>
+        <label for="4B">4B:</label>
+        <input type="checkbox" name="4B" id="">
+        <br><p></p>
+      </div>
 
       <input type="button" value="Save" id="Save">
       <!-- <a href="https://forms.gle/jAugGyBu7YaqWHR16" target="_blank" rel="noopener noreferrer" style="color: aqua;">Test it here!</a> -->
