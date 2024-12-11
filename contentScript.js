@@ -81,7 +81,8 @@ async function main() {
 			Award("Extension out of date!", "There is eather a new update out or a new update is on the way!", 10000, true)
 		}
 
-        let monthNAMES = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sep.", "Oct.   &#x1F383", "Nov.", "Dec.   &#x2744;"]; document.getElementById("Hedether").innerHTML = "Lunch for " + monthNAMES[month];
+        let monthNAMES = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sep.", "Oct.   &#x1F383", "Nov.", "Dec.   &#x2744;"]; 
+		document.getElementById("Hedether").innerHTML = "Lunch for " + monthNAMES[month];
 
 		document.getElementById("Thedate").innerHTML = (month + 1) + "/" + day + "/" + date.getFullYear()
 
@@ -99,6 +100,23 @@ async function main() {
 						child.classList.remove("rounded-text-box")
 						child.classList.remove("rounded-text-box-dark")
 						child.classList.add("rounded-text-box-Spook")
+					}
+				}
+			} else if (monthNAMES[month] == "Dec.   &#x2744;") {
+				document.body.classList.remove("dark-mode")
+				document.body.classList.add("X-mas")
+
+				document.getElementById("Hedether").innerHTML = "Lunch for " + "Dec.   &#x1f381;";
+
+				document.getElementById("Xmas-Music").volume = 0.2;
+				document.getElementById("Xmas-Music").play()
+
+				for (const child of document.body.children) {
+					console.log(child.nodeName)
+					if (child.nodeName == "H3" && child.className == "rounded-text-box" || child.className == "rounded-text-box-dark") {
+						child.classList.remove("rounded-text-box")
+						child.classList.remove("rounded-text-box-dark")
+						child.classList.add("rounded-text-box-X-Mas")
 					}
 				}
 			}
