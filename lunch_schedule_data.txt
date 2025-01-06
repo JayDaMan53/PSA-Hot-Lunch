@@ -76,7 +76,7 @@ AB_Schedule = {
         3: "N/A",
         4: "A Weekend",
         5: "A Weekend",
-        6: "TWD",
+        6: "A TWD",
         7: "B",
         8: "A",
         9: "B",
