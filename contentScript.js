@@ -81,6 +81,43 @@ async function main() {
 			Award("Extension out of date!", "There is eather a new update out or a new update is on the way!", 10000, true)
 		}
 
+		async function isGoogleFormOpen(formUrl) {
+			try {
+			  const response = await fetch(formUrl);
+			  if (!response.ok) {
+				console.error("Error fetching the form: HTTP status", response.status);
+				return null;
+			  }
+		  
+			  const html = await response.text();
+		  
+			  
+			  if (html.includes("Please check back later.")) {
+				return false; 
+			  }
+				
+			  return true;
+			} catch (error) {
+			  console.error("Error fetching the form:", error);
+			  return null;
+			}
+		}
+		  
+		  const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSf7lnNyFEmRpmOX_0mqx8zwb2q-rCXS-S9X_VPqyRxR3OXQ_w/viewform";
+		  isGoogleFormOpen(formUrl).then((isOpen) => {
+			if (isOpen === null) {
+			  console.log("Couldn't determine the form's status.");
+			} else if (isOpen) {
+			  console.log("The form is open.");
+			  document.getElementById("FormOpen").innerHTML = "[FORM OPEN]"
+			  document.getElementById("FormOpen").style.color = "green"
+			} else {
+			  console.log("The form is closed.");
+			  document.getElementById("FormOpen").innerHTML = "[FORM CLOSED]"
+			  document.getElementById("FormOpen").style.color = "red"
+			}
+		  });		  
+
         let monthNAMES = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sep.", "Oct.   &#x1F383", "Nov.", "Dec.   &#x2744;"]; 
 		document.getElementById("Hedether").innerHTML = "Lunch for " + monthNAMES[month];
 

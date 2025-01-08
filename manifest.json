@@ -3,7 +3,7 @@
 
   "name": "PSA Hot Lunch",
   "description": "Hot Lunch PSA",
-  "version": "1.5.13",
+  "version": "1.5.14",
   "manifest_version": 3,
   "action": {
   	"default_icon": {

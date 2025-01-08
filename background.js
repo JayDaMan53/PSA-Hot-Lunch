@@ -72,7 +72,7 @@ if (DayOfWeek != 0 && DayOfWeek != 6) {
         if (Save.SettingSave != undefined){
             var go = Save.Reminder != day && (Save.SettingSave[6] == true)
             if (date >= startTime && date < endTime && go) {
-                chrome.notifications.create("Order", notificationOptions);
+                chrome.notifications.create(notificationOptions);
                 chrome.storage.local.set({ Reminder: day }).then(() => {
                     console.log("Done!")
                 });
@@ -82,65 +82,6 @@ if (DayOfWeek != 0 && DayOfWeek != 6) {
 }
 
 chrome.notifications.onClicked.addListener(function(notifId){
-    if (notifId == "Order"){
-        chrome.tabs.create({ url: 'https://docs.google.com/forms/d/e/1FAIpQLSf7lnNyFEmRpmOX_0mqx8zwb2q-rCXS-S9X_VPqyRxR3OXQ_w/viewform' });
-        chrome.notifications.clear(notifId)
-    }
+    chrome.tabs.create({ url: 'https://docs.google.com/forms/d/e/1FAIpQLSf7lnNyFEmRpmOX_0mqx8zwb2q-rCXS-S9X_VPqyRxR3OXQ_w/viewform' });
+    chrome.notifications.clear(notifId)
 });
-
-chrome.notifications.onButtonClicked.addListener((notificationId, buttonIndex) => {
-    if (notifId == "AReminder") {
-        if (buttonIndex === 0) {
-            
-        } else if (buttonIndex === 1) {
-            // Handle "Dismiss" button click
-            chrome.notifications.clear(notificationId);
-        }
-    }
-});
-
-const AttendanceTimes = [
-    [new Date().setHours(8, 40), new Date().setHours(9)], // 8:40 - 9:00
-    [new Date().setHours(10, 15), new Date().setHours(10, 30)], // 10:15 - 10:30
-    [new Date().setHours(11, 45), new Date().setHours(12)], // 11:45 - 12:00
-    [new Date().setHours(12, 20), new Date().setHours(12, 30)] // 12:20 - 12:30
-    [new Date().setHours(13, 50), new Date().setHours(14)] // 1:50 - 2:00
-]
-
-const AttendancenotificationOptions = {
-    type: 'basic',
-    title: 'Attendance Reminder',
-    message: 'Take Attendance!',
-    iconUrl: 'Logos/icon128.png',
-    buttons: [
-        { title: "Sleep for 5 min" },
-        { title: "Dismiss" }
-    ]
-};
-
-if (DayOfWeek != 0 && DayOfWeek != 6) {
-    chrome.storage.local.get(["AttendanceReminder", "SettingSave"]).then((Save) => {
-        if (Save.SettingSave != undefined){
-
-            let TimeOfDayID = null
-
-            for (let i = 0; i <= 5; i++) {
-                const TimeSlot = AttendanceTimes[i]
-                if (TimeSlot) {
-                    if (date >= TimeSlot[0] && date < TimeSlot[1] && Save.SettingSave[8][i]) {
-                        TimeOfDayID = i
-                        break
-                    }
-                }
-            }
-
-            var go = Save.AttendanceReminder != TimeOfDayID && (Save.SettingSave[7] == true)
-            if (TimeOfDayID && go) {
-                chrome.notifications.create("AReminder", AttendancenotificationOptions);
-                chrome.storage.local.set({ AttendanceReminder: TimeOfDayID }).then(() => {
-                    console.log("Done!")
-                });
-            }
-        }
-    });
-}
