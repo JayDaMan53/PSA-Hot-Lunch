@@ -147,7 +147,10 @@
   <!--<div class="SandwichClicker"><b style="font-size: medium; text-decoration: underline;">Achievement Unlocked!</b><br><b style="font-size: medium">Title</b><br><b>Description</b></div>
   <a id="SettingsLink" class="link SettingsLink">Auto Fill Settings</a>-->
   <p></p>
-	<a id="Order" class="dark-mode-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf7lnNyFEmRpmOX_0mqx8zwb2q-rCXS-S9X_VPqyRxR3OXQ_w/viewform" target="_blank" rel="noopener noreferrer">Order</a>
+	<a id="Order" class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSf7lnNyFEmRpmOX_0mqx8zwb2q-rCXS-S9X_VPqyRxR3OXQ_w/viewform" target="_blank" rel="noopener noreferrer" style="display: flex; justify-content: space-between; align-items: center;">
+    <span style="text-align: left;">Order</span>
+    <b style="text-align: right; text-decoration: none;" id="FormOpen">Loading...</b>
+  </a>  
 	<p></p>
 	<a id="menu" class="dark-mode-link" href="https://linqconnect.com/public/menu/TXTX8P?buildingId=08d48a65-bba8-ed11-8e6a-c150c5c7a01a" target="_blank" rel="noopener noreferrer" style="z-index: 99999999;">Full Menu</a>
 	<p></p>
@@ -239,6 +242,43 @@ async function main() {
 		if (manifestData.version != version) {
 			Award("Extension out of date!", "There is eather a new update out or a new update is on the way!", 10000, true)
 		}/*/
+
+	    async function isGoogleFormOpen(formUrl) {
+			try {
+			  const response = await fetch(formUrl);
+			  if (!response.ok) {
+				console.error("Error fetching the form: HTTP status", response.status);
+				return null;
+			  }
+		  
+			  const html = await response.text();
+		  
+			  
+			  if (html.includes("Please check back later.")) {
+				return false; 
+			  }
+				
+			  return true;
+			} catch (error) {
+			  console.error("Error fetching the form:", error);
+			  return null;
+			}
+		}
+		  
+		  const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSf7lnNyFEmRpmOX_0mqx8zwb2q-rCXS-S9X_VPqyRxR3OXQ_w/viewform";
+		  isGoogleFormOpen(formUrl).then((isOpen) => {
+			if (isOpen === null) {
+			  console.log("Couldn't determine the form's status.");
+			} else if (isOpen) {
+			  console.log("The form is open.");
+			  document.getElementById("FormOpen").innerHTML = "[FORM OPEN]"
+			  document.getElementById("FormOpen").style.color = "green"
+			} else {
+			  console.log("The form is closed.");
+			  document.getElementById("FormOpen").innerHTML = "[FORM CLOSED]"
+			  document.getElementById("FormOpen").style.color = "red"
+			}
+		  });
 
         let monthNAMES = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sep.", "Oct.", "Nov.", "Dec."]; document.getElementById("Hedether").innerHTML = "Lunch for " + monthNAMES[month];
 
