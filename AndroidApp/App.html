@@ -254,7 +254,7 @@ async function main() {
 			  const html = await response.text();
 		  
 			  
-			  if (html.includes("Please check back later.")) {
+			  if (html.includes("Please check back later.") && !html.includes('"Please check back later.')) {
 				return false; 
 			  }
 				
