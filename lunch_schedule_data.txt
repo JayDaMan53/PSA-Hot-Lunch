@@ -33,7 +33,7 @@ lunchList = {
         31: "Mini Corn Dogs",
         32: "Jaydon needs to update the list :("
     },
-    2: {
+    1: {
         1: "N/A",
         2: "N/A",
         3: "Greg-a-roni (Creamy Beef Pasta)",
@@ -100,7 +100,7 @@ AB_Schedule = {
         30: "B",
         31: "Leap"
     },
-    2: {
+    1: {
         1: "A Weekend",
         2: "A Weekend",
         3: "B",
