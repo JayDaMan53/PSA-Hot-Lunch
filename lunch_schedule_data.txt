@@ -38,7 +38,7 @@ lunchList = {
         2: "N/A",
         3: "Greg-a-roni (Creamy Beef Pasta)",
         4: "Orange Chicken | Teriyaki Chicken",
-        5: "Cheeseburger",
+        5: "⚠️ Bring your own lunch ⚠️",
         6: "Bone-in Wings",
         7: "BBQ Turkey",
         8: "N/A",
