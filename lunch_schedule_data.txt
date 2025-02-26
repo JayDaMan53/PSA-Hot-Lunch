@@ -128,7 +128,7 @@ AB_Schedule = {
         25: "A",
         26: "B",
         27: "A",
-        28: "B",
+        28: "Leap",
     },
 }
 imgLink = "https://www.youtube.com/@9447V"
