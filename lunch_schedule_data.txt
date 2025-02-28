@@ -61,7 +61,7 @@ lunchList = {
         25: "Orange Chicken | Teriyaki Chicken",
         26: "Cheeseburger",
         27: "Bone-in Wings",
-        28: "BBQ Turkey",
+        28: "BBQ Turkey | $5 Pizza",
         29: "N/A",
     },
 }
