@@ -42,7 +42,7 @@ lunchList = {
         11: "Italian Meat Sauce",
         12: "Nachos",
         13: "Bone-in Wings",
-        14: "N/A",
+        14: "Only Pizza",
         15: "N/A",
         16: "N/A",
         17: "Baked Potato",
