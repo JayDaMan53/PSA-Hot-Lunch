@@ -56,7 +56,7 @@ lunchList = {
         25: "Walking Taco",
         26: "Smackers Chicken Bites",
         27: "Bone-in Wings",
-        28: "Texas Toast Grilled Cheese Sandwich",
+        28: "Texas Toast Grilled Cheese Sandwich | $5 Pizza",
         29: "N/A",
         30: "N/A",
         31: "Hot Dog",
