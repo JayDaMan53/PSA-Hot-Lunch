@@ -162,5 +162,5 @@ AB_Schedule = {
         30: "A",
     },
 }
-imgLink = "https://www.youtube.com/@9447V"
+imgLink = "https://palmettoscholarsacademy.revtrak.net/clubs/#/v/vex-robotics"
 version = "1.5.13"
