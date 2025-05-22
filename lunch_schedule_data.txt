@@ -40,14 +40,14 @@ lunchList = {
         20: "Orange Chicken | Teriyaki Chicken",
         21: "Cheeseburger",
         22: "Smackers Chicken Bites",
-        23: "Stuffed Crust Pizza",
+        23: "None",
         24: "N/A",
         25: "N/A",
         26: "N/A",
         27: "Orange Chicken | Teriyaki Chicken",
         28: "Cheeseburger",
         29: "PB&J Kit",
-        30: "Unkown",
+        30: "None",
         31: "Have a good summer!"
     },
 }
