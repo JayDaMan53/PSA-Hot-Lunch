@@ -96,11 +96,11 @@ AB_Schedule = {
         23: "a B half-day",
         24: "A Weekend",
         25: "A Weekend",
-        26: "A",
-        27: "B",
-        28: "A",
-        29: "B",
-        30: "an A half-day",
+        26: "Memorial Day",
+        27: "A",
+        28: "B",
+        29: "A",
+        30: "an B half-day",
     },
 }
 imgLink = "https://palmettoscholarsacademy.revtrak.net/clubs/#/v/vex-robotics"
